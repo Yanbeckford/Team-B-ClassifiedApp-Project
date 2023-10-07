@@ -23,10 +23,10 @@ app.use(
     secret: 'eye_color', 
     resave: false,
     saveUninitialized: false,
-    cookie: {
-      maxAge: 3600000, // 1 hour (in milliseconds)
+   // cookie: {
+     // maxAge: 3600000, // 1 hour (in milliseconds)
     },
-  })
+  )
 );
 
 app.use("/api/users",users)
@@ -42,3 +42,23 @@ app.use("/api/contact",contact)
   app.listen(port, () => { 
   console.log(`Server started on port ${port}` );
   })
+
+
+
+
+
+  /*
+
+function queryPromise(sql,values=[]){
+  return new Promise((resolve,reject)=>{
+  db.query(sql,values,(error,result)=>{
+          if(error){
+              reject(error)
+          }else{
+              resolve(result)
+          }
+  })
+  });
+  }
+
+  */

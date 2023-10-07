@@ -1,16 +1,19 @@
-const express = require("express")
-const mysql = require("mysql2")
+const mysql = require('mysql2');
+const db = mysql.createConnection({
+  host     : 'localhost', // default
+  user     : 'root', // default
+  password : '', //database password
+  database : '' // database name
+});
+ 
+// checking conecting 
+db.connect((err)=>{
+if(err){
+    console.log("Not Connected")
+}else{
+    console.log("Connected")
+}
+});
 
+module.exports=db
 
-const db = mysql.createPool({
-    host: "127.0.0.1",
-    port: 3306,
-    database: "mcqquestions_n_answers",
-    user: "root",
-    password: "Michealtutu123"
-  }).promise()
-  
-
-  
-
-   module.exports = db

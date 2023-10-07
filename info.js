@@ -9,7 +9,7 @@
 // Endpoint URL: /api/users/register
 // Objective: Allows users to create an account on the platform.
 // HTTP Method: POST
-// Input Data: User registration details (username, email, password, etc.).
+// Input Data: User registration details (username, email, password, phonenumber, etc.).
 // Validation: Validate input data for correctness and uniqueness.
 // Response: Return a success message upon successful registration.
 // Update Account
