@@ -13,21 +13,14 @@ const contact = require("./routes/contact")
 
 const port = 5000;
 
-app.use(express.json)
+app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
 app.use(cookieParser());
 
-app.use(
-  session({
-    secret: 'eye_color', 
-    resave: false,
-    saveUninitialized: false,
-   // cookie: {
-     // maxAge: 3600000, // 1 hour (in milliseconds)
-    },
-  )
-);
+
+
+
 
 app.use("/api/users",users)
 app.use("/api/products",products)
